@@ -4,13 +4,9 @@
 
 <ul>
   <li *ngFor="let todoItem of todoList">
-    {{ todoItem.title }}
+    <!-- {{ todoItem?.title }} -->
+    <app-todo-item [item]="todoItem"></app-todo-item>
   </li>
 </ul>
 
-<ng-container *ngIf="userLoggedIn">
-  <h1>Welcome!</h1>
-  <h2>You are logged in</h2>
-</ng-container>
 
-<h3>aaaa</h3>
