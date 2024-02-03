@@ -1,3 +1,16 @@
 <h1> Welcome to, {{ title }}</h1>
 <p>Congratulations! Your app is running. 🎉</p>
 <app-input-button-unit> </app-input-button-unit>
+
+<ul>
+  <li *ngFor="let todoItem of todoList">
+    {{ todoItem.title }}
+  </li>
+</ul>
+
+<ng-container *ngIf="userLoggedIn">
+  <h1>Welcome!</h1>
+  <h2>You are logged in</h2>
+</ng-container>
+
+<h3>aaaa</h3>
