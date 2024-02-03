@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './input-button-unit.component.scss'
 })
 export class InputButtonUnitComponent {
-
+  title ='Learn about components';
 }
