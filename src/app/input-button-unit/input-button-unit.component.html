@@ -1,12 +1,17 @@
-<p>input-button-unit works!
+<!-- <p>input-button-unit works!
     The item title is: {{title}}
-</p>
+</p> -->
 
-<input placeholder="test" 
+<input #inputElementRef
+       placeholder="test" 
        [value]="title" 
        (keyup.enter)="changeTitle(getInputValue($event))"/>
 
-<button (click)="changeTitle('Button Clicked!')">
+       <button (click)="changeTitle(inputElementRef.value)">
+        Save
+      </button>
+
+<!-- <button (click)="changeTitle('Button Clicked!')">
     Save
   </button>
- 
+  -->
