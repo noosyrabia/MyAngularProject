@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-input-button-unit',
@@ -9,11 +9,12 @@ import { Component } from '@angular/core';
   styleUrl: './input-button-unit.component.scss'
 })
 export class InputButtonUnitComponent {
+  @Output() submit: EventEmitter<string> = new EventEmitter<string>();
   title ='Hello World!'; 
 
-    changeTitle(newTitle : string): void {
+    submitValue(newTitle : string): void {
       console.log("avant change title");
-      this.title = newTitle;
+      this.submit.emit(newTitle);
       console.log("après change title")
   }
   getInputValue(event: Event): string {

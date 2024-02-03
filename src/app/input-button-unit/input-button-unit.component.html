@@ -5,9 +5,9 @@
 <input #inputElementRef
        placeholder="test" 
        [value]="title" 
-       (keyup.enter)="changeTitle(getInputValue($event))"/>
+       (keyup.enter)="submitValue(getInputValue($event))"/>
 
-       <button (click)="changeTitle(inputElementRef.value)">
+       <button (click)="submitValue(inputElementRef.value)">
         Save
       </button>
 
@@ -15,3 +15,6 @@
     Save
   </button>
   -->
+  <!-- <button (click)="changeTitle(inputElementRef.value)">
+    Save
+  </button> -->
