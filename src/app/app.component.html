@@ -1,12 +1,5 @@
 <h1> Welcome to, {{ title }}</h1>
 <p>Congratulations! Your app is running. 🎉</p>
-<app-input-button-unit (submit)="addItem($event)"> </app-input-button-unit>
-
-<ul>
-  <li *ngFor="let todoItem of todoList">
-    <!-- {{ todoItem?.title }} -->
-    <app-todo-item [item]="todoItem"></app-todo-item>
-  </li>
-</ul>
+<app-list-manager></app-list-manager>
 
 
